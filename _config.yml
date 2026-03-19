@@ -8,7 +8,7 @@ version: 2
 # Personal info
 name: 조윤하 Cho Yun Ha
 title: Backend Engineer
-email: jojojo7391@gmail.com
+email: yunha230@naver.com
 phone: "010-5440-5086"
 
 # Dark Mode (true/false/never)
@@ -123,13 +123,13 @@ content:
     content: |
       #### 수상
 
-      | 수상명 | 주관 | 비고 |
-      |---|---|---|
-      | **2025 오픈소스SW 페스티벌** 프로젝트 부문 최우수상 | 정보통신기획평가원 | 훈격: 총장상 |
-      | **탄소중립 INNOVACATION ACADEMY** 최종 발표회 대상 | 인하대학교 SW중심대학사업단 | 팀 프로젝트 부문 |
-      | **탄소중립 INNOVACATION ACADEMY** 대상 | 인하대학교 SW중심대학사업단 | 개인역량 강화 부문 |
-      | **K-SoftVation Showcase** 우수상 | 정보통신기획평가원 | |
-      | **Korea Software Empowerment Bootcamp** 우수 교육생 | 정보통신기획평가원 | |
+      | 날짜 | 수상명 | 주관 | 비고 |
+      |---|---|---|---|
+      | 2025.06.20 | **Korea Software Empowerment Bootcamp** MINI PROJECT 우수 교육생 | 정보통신기획평가원 | |
+      | 2025.08.28 | **K-SoftVation Showcase** 우수상 | 정보통신기획평가원 | |
+      | 2025.10.27 | **2025 오픈소스SW 페스티벌** 프로젝트 부문 최우수상 | 정보통신기획평가원 | 훈격: 총장상 |
+      | 2025.12.22 | **탄소중립 INNOVACATION ACADEMY** 대상 | 인하대학교 SW중심대학사업단 | 개인역량 강화 부문 |
+      | 2025.12.22 | **탄소중립 INNOVACATION ACADEMY** 최종 발표회 대상 | 인하대학교 SW중심대학사업단 | 팀 프로젝트 부문 |
 
       #### 교육 및 활동
 
