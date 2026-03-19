@@ -4,3 +4,11 @@
 _site
 *.code-workspace
 vendor
+
+# documents
+doc/*
+doc
+
+# agent
+.claude
+.serena
