@@ -87,7 +87,7 @@ content:
           **Python · FastAPI · AWS · Docker · Nginx · C++ · XGBoost · LangChain**
 
           - **19분 → 1초** 달성: Predecessor pointer 경량화, epsilon-pruning, **C++ 탐색 엔진**, 토폴로지 캐시 사전 로딩, Marking 전략
-          - 동일 부하 기준 **RPS 75배 향상**, 알고리즘 수행 시간 **120% 감소**
+          - 동일 부하 기준 **RPS 75배 향상**, 알고리즘 수행 시간 **99% 이상 감소**
           - AWS Bedrock + LangChain 기반 지하철 편의시설 AI 챗봇 구현 (RAG)
           - XGBoost 서울 지하철 혼잡도 예측 모델 구현 (R² **0.9151**)
           - Nginx Reverse Proxy + Load Balancing, AWS Lambda · RDS · S3 아키텍처
