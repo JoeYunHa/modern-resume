@@ -50,7 +50,8 @@ content:
 
           - **PyTorch** 기반 앙상블 ML 모델 설계 (Multiscale ResNet18 + OrbitCNN1D)
           - **XAI** 구현: Integrated Gradients (배치 방식, 30-step) + GradCAM
-          - Python Daemon Pool로 모델 콜드 스타트 제거, 동시성 제한 배치 병렬 처리
+          - **2계층 동시성 제어** 설계: Promise.race 기반 소프트웨어 **Semaphore**(동시 처리 1~4, 기본값 2) + Python Daemon Pool(워커 1~4개)을 maxConcurrent == maxWorkers 1:1 동기화로 연결, 자원 경합 방지 및 콜드 스타트 제거
+          - 배치별 독립 AbortController 취소 전략 (신규 투입 차단 → 대기 큐 reject → in-flight 완료 대기 3단계), 워커 크래시 자동 복구
           - OOD(Out-of-Distribution) 탐지 설계 및 Grid Search 앙상블 가중치 자동 최적화
 
       - layout: left
@@ -65,7 +66,7 @@ content:
           산업용 계측 시스템(NIMS) 데이터 통합 처리 데스크톱 앱 <mark>NIMS I/O Simulator</mark> 개발.
 
           - Electron · React · Python · C++ N-API Addon **4개 런타임** 멀티 아키텍처 설계 및 구현
-          - 커스텀 바이너리 IPC 프로토콜 설계: 전송 크기 **88% 감소**, 역직렬화 **10× 향상**
+          - 커스텀 바이너리 IPC 프로토콜 설계: 전송 크기 **61% 감소**, 역직렬화 **218× 향상**
           - DLL 비스레드 안전(non-thread-safe) 문제 → C++ 단일 워커 스레드 + TSFN 패턴으로 해결
           - Canvas 2D 뷰포트 다운샘플 렌더러로 수백만 샘플 파형 고성능 렌더링
 
