@@ -7,7 +7,7 @@ version: 2
 
 # Personal info
 name: 조윤하 Cho Yun Ha
-title: Backend Engineer
+title: AI Engineer
 email: yunha230@naver.com
 phone: "010-5440-5086"
 
@@ -21,16 +21,16 @@ github_username: JoeYunHa
 # About Section
 # about_profile_image: images/profile.jpg
 about_content: |
-  **데이터로 성능 병목을 진단하고, 아키텍처로 해결하는 백엔드 개발자**입니다.
+  **딥러닝 모델 설계부터 프로덕션 배포까지 E2E 경험을 보유한 AI 엔지니어**입니다.
 
-  성능 문제를 단순한 스펙 업그레이드가 아닌, 계측·분석·구조 재설계로 해결합니다.
-  경로 탐색 **19분 → 1초**, WebSocket 응답 **90% 이상 단축** 등 수치로 증명된 최적화 경험을 보유하고 있습니다.
+  PyTorch 앙상블·MAE 기반 이상 탐지, LLM Agent(AWS Bedrock · LangChain), ML 파이프라인 구축 등 AI 솔루션을 실전 서비스에 직접 설계·구현했습니다.
+  성능 문제는 계측·분석·구조 재설계로 해결합니다: 경로 탐색 **19분 → 1초**, WebSocket 응답 **90% 이상 단축**.
 
-  - **Languages:** C++, Python, Java, JavaScript
+  - **ML/AI:** PyTorch, XGBoost, scikit-learn, LangChain, AWS Bedrock, NumPy, SciPy
+  - **Languages:** Python, C++, Java, JavaScript, TypeScript
   - **Frameworks:** FastAPI, Spring Boot, React, Electron
-  - **Cloud & DB:** AWS (Lambda · EC2 · RDS · S3), Docker, Redis
-  - **ML/AI:** PyTorch, XGBoost, LangChain, AWS Bedrock
-  - **Etc:** Git, WebSocket, TypeScript, N-API C++
+  - **Cloud & Infra:** AWS (Lambda · EC2 · RDS · S3 · API Gateway), Docker, Nginx, Redis
+  - **Etc:** Git, WebSocket, SQL, N-API C++
 
 content:
   - title: Experience
@@ -48,11 +48,11 @@ content:
         description: |
           원자력 발전소 RCP(Reactor Coolant Pump) 진동 감시 시스템 <mark>RCPVMS</mark> 개발.
 
-          - **PyTorch** 기반 앙상블 ML 모델 설계 (Multiscale ResNet18 + OrbitCNN1D)
-          - **XAI** 구현: Integrated Gradients (배치 방식, 30-step) + GradCAM
-          - **2계층 동시성 제어** 설계: Promise.race 기반 소프트웨어 **Semaphore**(동시 처리 1~4, 기본값 2) + Python Daemon Pool(워커 1~4개)을 maxConcurrent == maxWorkers 1:1 동기화로 연결, 자원 경합 방지 및 콜드 스타트 제거
-          - 배치별 독립 AbortController 취소 전략 (신규 투입 차단 → 대기 큐 reject → in-flight 완료 대기 3단계), 워커 크래시 자동 복구
-          - OOD(Out-of-Distribution) 탐지 설계 및 Grid Search 앙상블 가중치 자동 최적화
+          - **3계층 탐지 파이프라인:** 앙상블(ResNet18 + OrbitCNN1D) → OOD 탐지(max_conf + TV Distance) → MAE 재구성 오차(Transformer, 정상 데이터 단독 학습). 컴포넌트별 Graceful Degradation 설계
+          - **물리 정보 인코딩:** 4채널 스펙트로그램 — Im(Gxy)(교차 스펙트럼 허수부)로 와류 방향 명시 인코딩. H-flip 증강 없이 순방향/역방향 와류 구분
+          - **XAI:** Integrated Gradients(30-step) + GradCAM 히트맵으로 예측 근거 시각화
+          - **Hot-standby 워커 풀:** Python inference daemon 사전 적재(콜드 스타트 비용 0), 워커 크래시 → 자동 재시작·idle 복귀. 동시 처리 1~4 구성
+          - Grid Search 앙상블 가중치 최적화: 목적함수 `val_acc × (1 − ood_fp_rate)`
 
       - layout: left
         title: RealGain
