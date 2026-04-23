@@ -7,7 +7,7 @@ version: 2
 
 # Personal info
 name: 조윤하 Cho Yun Ha
-title: Backend Engineer
+title: 신입 백엔드 개발자
 email: jojojo7391@gmail.com
 phone: "010-5440-5086"
 
@@ -21,16 +21,15 @@ github_username: JoeYunHa
 # About Section
 # about_profile_image: images/profile.jpg
 about_content: |
-  **데이터로 성능 병목을 진단하고, 아키텍처로 해결하는 백엔드 개발자**입니다.
+  **성능 병목을 계측·분석·구조 재설계로 해결하는 신입 백엔드 개발자**입니다.
 
-  FastAPI · Spring Boot 기반 API 설계, WebSocket 실시간 통신, AWS 클라우드 아키텍처 구축 등 백엔드 전 영역을 직접 설계·구현했습니다.
-  성능 문제는 계측·분석·구조 재설계로 해결합니다: 경로 탐색 **19분 → 1초**, WebSocket 응답 **90% 이상 단축**, RPS **75배 향상**.
+  Spring Boot · FastAPI 기반 REST API 설계, WebSocket 실시간 통신, AWS 클라우드 아키텍처를 직접 설계·구현했습니다.
+  문제가 발생하면 데이터로 원인을 파악하고, 아키텍처 수준의 근본 해결을 지향합니다.
 
-  - **Languages:** Python, Java, C++, JavaScript, TypeScript
-  - **Frameworks:** FastAPI, Spring Boot, React, Electron
+  - **주력 언어:** Java, Python
+  - **Frameworks:** Spring Boot, FastAPI
   - **Cloud & Infra:** AWS (Lambda · EC2 · RDS · S3 · API Gateway), Docker, Nginx, Redis
-  - **ML/AI:** PyTorch, XGBoost, LangChain, AWS Bedrock, NumPy, SciPy
-  - **Etc:** Git, WebSocket, SQL, N-API C++
+  - **기타:** C++, JavaScript, TypeScript, WebSocket, SQL, Git
 
 content:
   - title: Experience
@@ -76,7 +75,7 @@ content:
       - layout: left
         border: weak
         title: kindMap
-        sub_title: 팀장 | 알고리즘 개발 · 시스템 아키텍처 · DB 설계 · PM
+        sub_title: 팀장 | 경로 탐색 알고리즘 · 시스템 아키텍처 · DB 설계 단독 담당 / PM
         caption: 2025.08 - 2025.11
         additional_links:
           - title: KindMap
@@ -87,15 +86,15 @@ content:
         description: |
           **Python · FastAPI · AWS · Docker · Nginx · C++ · XGBoost · LangChain**
 
-          - **19분 → 1초** 달성: Predecessor pointer 경량화, epsilon-pruning, **C++ 탐색 엔진**, 토폴로지 캐시 사전 로딩, Marking 전략
-          - 동일 부하 기준 **RPS 75배 향상**, 알고리즘 수행 시간 **99% 이상 감소**
+          - 경로 탐색 알고리즘 단독 설계·구현으로 **19분 → 1초** 달성 (서울 지하철 실데이터 기준): Predecessor pointer 경량화, epsilon-pruning, **C++ 탐색 엔진**, 토폴로지 캐시 사전 로딩, Marking 전략
+          - 부하 테스트 실측 기준 **RPS 75배 향상**, 알고리즘 수행 시간 **99% 이상 감소**
           - AWS Bedrock + LangChain 기반 지하철 편의시설 AI 챗봇 구현 (RAG)
           - XGBoost 서울 지하철 혼잡도 예측 모델 구현 (R² **0.9151**)
           - Nginx Reverse Proxy + Load Balancing, AWS Lambda · RDS · S3 아키텍처
 
       - layout: left
         title: 수담(手談)
-        sub_title: 기술 총 책임자 | 시스템 아키텍처 · DB 설계 · 백엔드 개발
+        sub_title: 기술 총 책임자 | 백엔드 전 담당 (시스템 아키텍처 · DB 설계 · API · WebSocket)
         caption: 2025.07 - 2025.09
         additional_links:
           - title: KSEB-MEGA-CREW
@@ -109,7 +108,7 @@ content:
           - AI I/O Spec 미확정 블로커 → 초기 모델 이식으로 선제적 테스트 환경 구축, 백엔드 의존성 제거
           - 프록시 계층 제거, 프레임 처리 AI 서버 ↔ WebSocket <mark>직접 연결</mark> 아키텍처로 재설계
           - 정적 데이터 캐시 사전 적재로 불필요한 DB 접근 제거, <mark>O(1) 조회</mark> 구현
-          - 응답 시간 **1,000ms → 100ms** (**90% 이상 감소**)
+          - WebSocket 프레임 처리 응답 시간 **1,000ms → 100ms** (로컬 부하 테스트 실측, 90% 이상 감소)
 
   - title: Education
     layout: list
