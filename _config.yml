@@ -7,8 +7,8 @@ version: 2
 
 # Personal info
 name: 조윤하 Cho Yun Ha
-title: AI Engineer
-email: yunha230@naver.com
+title: Backend Engineer
+email: jojojo7391@gmail.com
 phone: "010-5440-5086"
 
 # Dark Mode (true/false/never)
@@ -21,15 +21,15 @@ github_username: JoeYunHa
 # About Section
 # about_profile_image: images/profile.jpg
 about_content: |
-  **딥러닝 모델 설계부터 프로덕션 배포까지 E2E 경험을 보유한 AI 엔지니어**입니다.
+  **데이터로 성능 병목을 진단하고, 아키텍처로 해결하는 백엔드 개발자**입니다.
 
-  PyTorch 앙상블·MAE 기반 이상 탐지, LLM Agent(AWS Bedrock · LangChain), ML 파이프라인 구축 등 AI 솔루션을 실전 서비스에 직접 설계·구현했습니다.
-  성능 문제는 계측·분석·구조 재설계로 해결합니다: 경로 탐색 **19분 → 1초**, WebSocket 응답 **90% 이상 단축**.
+  FastAPI · Spring Boot 기반 API 설계, WebSocket 실시간 통신, AWS 클라우드 아키텍처 구축 등 백엔드 전 영역을 직접 설계·구현했습니다.
+  성능 문제는 계측·분석·구조 재설계로 해결합니다: 경로 탐색 **19분 → 1초**, WebSocket 응답 **90% 이상 단축**, RPS **75배 향상**.
 
-  - **ML/AI:** PyTorch, XGBoost, scikit-learn, LangChain, AWS Bedrock, NumPy, SciPy
-  - **Languages:** Python, C++, Java, JavaScript, TypeScript
+  - **Languages:** Python, Java, C++, JavaScript, TypeScript
   - **Frameworks:** FastAPI, Spring Boot, React, Electron
   - **Cloud & Infra:** AWS (Lambda · EC2 · RDS · S3 · API Gateway), Docker, Nginx, Redis
+  - **ML/AI:** PyTorch, XGBoost, LangChain, AWS Bedrock, NumPy, SciPy
   - **Etc:** Git, WebSocket, SQL, N-API C++
 
 content:
@@ -140,10 +140,12 @@ content:
 
       #### 자격증
 
-      - **SQLD** — 합격
-      - **AWS Certified Cloud Practitioner** (Foundational)
-      - **TOPCIT** 수준 3
-      - **탄소중립 SW/AI 엔지니어 인증서** — 등급: <mark>A</mark>
+      | 취득일 | 자격증명 | 비고 |
+      |---|---|---|
+      | 2026.03.27 | **SQLD** (SQL 개발자) | 한국데이터산업진흥원 |
+      | 2025.09.11 | **AWS Certified Cloud Practitioner** | Amazon Web Services (Foundational) |
+      | 2025.05.24 | **TOPCIT** | 수준 3 |
+      | 2025.12.31 | **탄소중립 SW/AI 엔지니어 인증서** | 등급: <mark>A</mark> |
 
 # Footer
 footer_show_references: false
