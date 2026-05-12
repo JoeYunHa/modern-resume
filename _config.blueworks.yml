@@ -1,0 +1,185 @@
+# ============================================================
+# 블루웍스 로봇제어 AI에이전트 소프트웨어 개발자 전용 포트폴리오
+# Target: ㈜블루웍스 / 판교 / 연봉 4,000~5,000만원
+# ============================================================
+
+version: 2
+
+name: 조윤하 Cho Yun Ha
+title: AI 에이전트 · 산업 제어 소프트웨어 개발자
+email: jojojo7391@gmail.com
+phone: "010-5440-5086"
+
+darkmode: false
+
+github_username: JoeYunHa
+
+about_content: |
+  **Python · Java · Node.js 기반 산업용 AI 에이전트 및 실시간 제어 소프트웨어 개발자**입니다.
+
+  원자력 발전소 진동 감시 시스템(RCPVMS)과 산업용 계측 데이터 통합 처리 앱(NIMS I/O Simulator)을
+  실제 납품 환경에서 단독 설계·구현한 경험이 있습니다.
+  **LangChain · AWS Bedrock** 기반 AI 에이전트를 서비스에 직접 적용했으며,
+  C++ 연산 엔진을 Python/Node.js 레이어와 연동하는 **멀티 런타임 아키텍처**를 설계합니다.
+
+  - **주력 언어:** Python, Java, Node.js (JavaScript / TypeScript), C++
+  - **AI / ML:** PyTorch, LangChain, AWS Bedrock, XGBoost (RAG · 에이전트 · 이상탐지)
+  - **실시간 시스템:** WebSocket, IPC 프로토콜 설계, 바이너리 파싱
+  - **Cloud & Infra:** AWS (Lambda · EC2 · RDS · S3 · API Gateway), Docker, Nginx, Redis
+  - **Frameworks:** FastAPI, Spring Boot, Electron
+
+content:
+  - title: Experience
+    layout: list
+    content:
+
+      - layout: left
+        border: weak
+        title: RealGain
+        sub_title: 기술 자문 계약직 — AI 추론 엔진 · 산업 제어 소프트웨어
+        caption: 2026.02 - 2026.06
+        additional_links:
+          - title: JoeYunHa/realgain_5_BE
+            icon: fab fa-github
+            url: https://github.com/JoeYunHa/realgain_5_BE
+        description: |
+          원자력 발전소 **RCP(냉각재 순환 펌프) 진동 감시 시스템 RCPVMS** 개발.
+          Python 3.11 + PyTorch 기반 오프라인 AI 추론 엔진과 Electron 데스크톱 앱 단독 설계·구현.
+
+          **AI 추론 파이프라인 설계**
+          - **3계층 탐지 파이프라인:** 앙상블(ResNet18 + OrbitCNN1D) → OOD 탐지(max_conf + TV Distance) → Transformer MAE 재구성 오차. 각 계층 독립 Graceful Degradation
+          - **물리 정보 인코딩:** Im(Gxy) 교차 스펙트럼 허수부로 와류 회전 방향을 4채널 스펙트로그램에 명시 인코딩 (H-flip 증강 금지로 물리 정보 보존)
+          - **XAI:** Integrated Gradients(30-step) + GradCAM 히트맵으로 예측 근거 시각화
+          - Grid Search 가중치 자동 최적화: 목적함수 `val_acc × (1 − ood_fp_rate)`
+
+          **실시간 추론 서버 설계 (로봇제어 응용 가능 구조)**
+          - **Python Daemon Pool (Hot-Standby):** 모델 사전 적재로 콜드 스타트 비용 0, 워커 크래시 자동 재시작·idle 복귀, 동적 pool.resize(1~4)
+          - Node.js IPC ↔ Python inference daemon 간 커스텀 바이너리 프로토콜로 저지연 통신
+
+      - layout: left
+        title: RealGain
+        sub_title: 현장실습 — 멀티 런타임 산업용 데스크톱 앱
+        caption: 2026.01 - 2026.02
+        additional_links:
+          - title: JoeYunHa/NIMS_IO_simulator_prototype
+            icon: fab fa-github
+            url: https://github.com/JoeYunHa/NIMS_IO_simulator_prototype
+        description: |
+          원자력 감시 계통(NIMS) 데이터 통합 처리 데스크톱 앱 **NIMS I/O Simulator** 개발.
+          LPMS · ALMS · RCPVMS · IVMS 4종 시스템 + DMD 포맷 지원. 단독 전체 개발.
+
+          **Python · Node.js · C++ 멀티 런타임 아키텍처** (채용공고 필수 스킬 3종 직접 적용)
+          - Electron(Node.js) UI ↔ Python 파싱 엔진 ↔ C++ N-API Addon **4개 런타임 동시 운용**
+          - 커스텀 바이너리 IPC 프로토콜 설계 (매직넘버 + 정렬 패딩 + 하이브리드 JSON/Binary): 전송 크기 **61% 감소**, 역직렬화 **218× 향상**
+          - DLL 비스레드 안전 문제 → C++ 단일 전용 워커 스레드 + TSFN 패턴으로 해결
+          - DMD 청크 스트리밍 + 동시성 제한 병렬 요청(concurrency=4)으로 대용량 처리
+          - Canvas 2D 뷰포트 다운샘플 렌더러로 수백만 샘플 파형 고성능 렌더링
+
+  - title: Projects
+    layout: list
+    content:
+
+      - layout: left
+        border: weak
+        title: kindMap
+        sub_title: 팀장 | AI 에이전트 · 경로 탐색 엔진 · 시스템 아키텍처 단독 담당
+        caption: 2025.08 - 2025.11
+        additional_links:
+          - title: KindMap
+            icon: fab fa-github
+            url: https://github.com/KindMap
+        quote: >
+          교통약자 유형별 최적 경로 탐색 및 편의시설 안내 지도 서비스
+        description: |
+          **Python · FastAPI · AWS · Docker · Nginx · C++ · XGBoost · LangChain · AWS Bedrock**
+
+          **AI 에이전트 구현 (RAG 기반)**
+          - AWS Bedrock + LangChain 기반 지하철 편의시설 **AI 챗봇 에이전트** 구현
+          - AWS Lambda + RDS 서버리스 아키텍처로 에이전트 백엔드 분리 운영
+
+          **고성능 제어 엔진 구현 (로봇 경로 계획 알고리즘과 동일 도메인)**
+          - 경로 탐색 엔진 단독 설계: Predecessor pointer 경량화, epsilon-pruning, **C++ 탐색 엔진**, 토폴로지 캐시(O(1) 조회), Marking 전략
+          - 탐색 시간 **19분 → 1초 이내** (서울 지하철 실데이터 기준), RPS **75배 향상**
+
+          **ML 모델 적용**
+          - XGBoost 서울 지하철 혼잡도 예측 모델 (R² **0.9151**)
+          - Nginx Reverse Proxy + Load Balancing, AWS Lambda · RDS · S3 아키텍처
+
+      - layout: left
+        title: 수담(手談)
+        sub_title: 기술 총 책임자 | 백엔드 전체 · AI 파이프라인 · 실시간 통신 담당
+        caption: 2025.07 - 2025.09
+        additional_links:
+          - title: KSEB-MEGA-CREW
+            icon: fab fa-github
+            url: https://github.com/KSEB-MEGA-CREW
+        quote: >
+          텍스트/음성과 3D 아바타 수어 영상 간 실시간 양방향 번역 AI 서비스
+        description: |
+          **Python · FastAPI · WebSocket · Redis · AWS · Claude API**
+
+          **실시간 AI 파이프라인 설계 (로봇 제어 루프와 동일 구조)**
+          - AI I/O Spec 미확정 블로커 → 초기 모델 직접 이식, 선제적 테스트 환경 구축
+          - 프록시 계층 제거 후 AI 서버 ↔ WebSocket **직접 연결** 아키텍처로 재설계
+          - 정적 데이터 캐시 사전 적재로 DB 접근 제거, <mark>O(1) 조회</mark>
+          - 응답 시간 **1,000ms → 100ms** (90% 이상 감소, 로컬 부하 테스트 실측)
+
+  - title: Education
+    layout: list
+    content:
+      - layout: left
+        title: 인하대학교
+        sub_title: 컴퓨터공학과
+        caption: 2020 - 2026.08 (졸업예정)
+
+  - title: 활동 및 수상
+    layout: text
+    content: |
+      #### 수상
+
+      | 날짜 | 수상명 | 주관 | 비고 |
+      |---|---|---|---|
+      | 2025.06.20 | **Korea Software Empowerment Bootcamp** MINI PROJECT 우수 교육생 | 정보통신기획평가원 | |
+      | 2025.08.28 | **K-SoftVation Showcase** 우수상 | 정보통신기획평가원 | |
+      | 2025.10.27 | **2025 오픈소스SW 페스티벌** 프로젝트 부문 최우수상 | 인하대학교 SW중심대학사업단 | 훈격: 총장상 |
+      | 2025.12.22 | **탄소중립 INNOVACATION ACADEMY** 대상 | 인하대학교 SW중심대학사업단 | 개인역량 강화 부문 |
+      | 2025.12.22 | **탄소중립 INNOVACATION ACADEMY** 최종 발표회 대상 | 인하대학교 SW중심대학사업단 | 팀 프로젝트 부문 |
+
+      #### 교육 및 활동
+
+      - **2025년 K-Software Empowerment Bootcamp 4기** 수료 (2025.01 - 2025.11) — 정보통신기획평가원
+      - **2025년 탄소중립 INNOVACATION ACADEMY 4기** 수료 (2025.08 - 2025.12) — 인하대학교 SW중심대학사업단
+      - **Start-Up K-Shield Jr.** 수료 (80H)
+
+      #### 자격증
+
+      | 취득일 | 자격증명 | 비고 |
+      |---|---|---|
+      | 2026.03.27 | **SQLD** (SQL 개발자) | 한국데이터산업진흥원 |
+      | 2025.09.11 | **AWS Certified Cloud Practitioner** | Amazon Web Services (Foundational) |
+      | 2025.12.31 | **탄소중립 SW/AI 엔지니어 인증서** | 등급: <mark>A</mark> |
+      | 2025.05.24 | **TOPCIT** | 수준 3 |
+
+# Footer
+footer_show_references: false
+
+# Build settings
+sass:
+  sass_dir: _sass
+  style: compressed
+
+plugins:
+ - jekyll-seo-tag
+
+exclude: [
+  "Gemfile",
+  "Gemfile.lock",
+  "node_modules",
+  "vendor/bundle/",
+  "vendor/cache/",
+  "vendor/gems/",
+  "vendor/ruby/",
+  "lib/",
+  "scripts/",
+  "docker-compose.yml",
+  ]
